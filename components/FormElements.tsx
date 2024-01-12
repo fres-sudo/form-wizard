@@ -6,22 +6,26 @@ export type ElementsType = "TextField";
 export type FormElement = {
   type: ElementsType;
 
-  construct: (id: string) => FormELementIstance;
+  construct: (id: string) => FormElementInstance;
 
   designerBtnElement: {
     icon: React.ElementType;
     label: string;
   };
-  deisgnerComponent: React.FC;
+  deisgnerComponent: React.FC<{
+    elementInstance: FormElementInstance;
+  }>;
   formComponent: React.FC;
-  propertiesComponent: React.FC;
+  propertiesComponent: React.FC<{
+    elementInstance: FormElementInstance;
+  }>;
 };
 
 type FormElementsType = {
   [jey in ElementsType]: FormElement;
 };
 
-export type FormELementIstance = {
+export type FormElementInstance = {
   id: string;
   type: ElementsType;
   extraAttributes?: Record<string, any>; //string key and as a value any kind of object
