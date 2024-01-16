@@ -1,6 +1,6 @@
 Form Wizard is a web app that allows users to create interactive, customizable, and shareable forms. The app is built with React, TypeScript, TailwindCSS, Prisma, and DnD-Kit. It is fully integrated with all browsers, the server, and an authentication system.
 
-The app is inspired to this tutorial (https://www.youtube.com/watch?v=QGXUUXy0AMw&t=9748s)
+The app is inspired to [this tutorial](https://www.youtube.com/watch?v=QGXUUXy0AMw&t=9748s)
 
 ## Getting Started
 
