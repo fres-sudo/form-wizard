@@ -5,7 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 import DesignerContextProvider from "@/components/context/DesignerContext";
-
+import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,18 +21,19 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <DesignerContextProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange>
-            <body className={inter.className}>
+        <body className={inter.className}>
+          <NextTopLoader />
+          <DesignerContextProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange>
               {children}
               <Toaster />
-            </body>
-          </ThemeProvider>
-        </DesignerContextProvider>
+            </ThemeProvider>
+          </DesignerContextProvider>
+        </body>
       </html>
     </ClerkProvider>
   );

@@ -26,24 +26,25 @@ import {
 } from "../ui/form";
 import { Switch } from "../ui/switch";
 import { cn } from "@/lib/utils";
+import { Bs123 } from "react-icons/bs";
 
-const type: ElementsType = "TextField";
+const type: ElementsType = "NumberField";
 
 const extraAttributes = {
-  label: "Text field",
+  label: "Number field",
   helperText: "Helper text",
   required: false,
-  placeHolder: "Value here...",
+  placeHolder: "0",
 };
 
 const propertiesSchema = z.object({
-  label: z.string().min(2).max(300),
-  helperText: z.string().max(50),
+  label: z.string().min(2).max(50),
+  helperText: z.string().max(200),
   required: z.boolean().default(false),
   placeHolder: z.string().max(50),
 });
 
-export const TextFieldFormElement: FormElement = {
+export const NumberFieldFormElement: FormElement = {
   type,
 
   construct: (id: string) => ({
@@ -52,8 +53,8 @@ export const TextFieldFormElement: FormElement = {
     extraAttributes,
   }),
   designerBtnElement: {
-    icon: MdTextFields,
-    label: "Text Field",
+    icon: Bs123,
+    label: "Number Field",
   },
 
   deisgnerComponent: DesignerComponent,
@@ -89,7 +90,7 @@ function DesignerComponent({
         {label}
         {required && "*"}
       </Label>
-      <Input readOnly disabled placeholder={placeHolder} />
+      <Input type="number" readOnly disabled placeholder={placeHolder} />
       {helperText && (
         <p className="text-muted-foreground text-[0.8rem]">{helperText}</p>
       )}
@@ -125,11 +126,15 @@ function FormComponent({
         {required && "*"}
       </Label>
       <Input
+        type="number"
         placeholder={placeHolder}
         onChange={(e) => setValue(e.target.value)}
         onBlur={(e) => {
           if (!submitValue) return;
-          const valid = TextFieldFormElement.validate(element, e.target.value);
+          const valid = NumberFieldFormElement.validate(
+            element,
+            e.target.value
+          );
           setError(!valid);
           if (!valid) return;
           submitValue(element.id, e.target.value);

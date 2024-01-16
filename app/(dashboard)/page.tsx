@@ -56,48 +56,48 @@ interface StatsCardProps {
   loading: boolean;
 }
 
-function StatsCards(props: StatsCardProps) {
+export function StatsCards(props: StatsCardProps) {
   const { data, loading } = props;
 
   return (
     <div className="w-full pt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <StatsCard
         title="Total visits"
-        icon={<LuView className="text-blue-600" />}
+        icon={<LuView className="text-primary" />}
         helperText="All time form visits"
         value={data?.visits.toLocaleString() || ""}
         loading={loading}
-        className="shad-mg shadow-blue-600"
+        className="shad-mg"
       />
       <StatsCard
         title="Total submissions"
-        icon={<FaWpforms className="text-yellow-600" />}
+        icon={<FaWpforms className="text-primary" />}
         helperText="All time form submissions"
         value={data?.submissions.toLocaleString() || ""}
         loading={loading}
-        className="shad-mg shadow-yellow-600"
+        className="shad-mg"
       />
       <StatsCard
         title="Submission rate"
-        icon={<HiCursorClick className="text-green-600" />}
+        icon={<HiCursorClick className="text-primary" />}
         helperText="Visits that result in form submissions"
         value={data?.submissionRate.toLocaleString() + "%" || ""}
         loading={loading}
-        className="shad-mg shadow-green-600"
+        className="shad-mg"
       />
       <StatsCard
         title="Buonce rate"
-        icon={<TbArrowBounce className="text-red-600" />}
+        icon={<TbArrowBounce className="text-primary" />}
         helperText="Visits that leavs without interacting"
         value={data?.bounceRate.toLocaleString() + "%" || ""}
         loading={loading}
-        className="shad-mg shadow-red-600"
+        className="shad-mg"
       />
     </div>
   );
 }
 
-function StatsCard({
+export function StatsCard({
   title,
   value,
   icon,
@@ -114,10 +114,8 @@ function StatsCard({
 }) {
   return (
     <Card className={className}>
-      <CardHeader className="flex flex-row items-center justify-between pg-2">
-        <CardTitle className="text-sm font-medium text-muted-foreground">
-          {title}
-        </CardTitle>
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle className="text-sm font-medium">{title}</CardTitle>
         {icon}
       </CardHeader>
       <CardContent>
@@ -162,7 +160,7 @@ function FormCard({ form }: { form: Form }) {
         <CardDescription className="flex items-center justify-between text-muted-foreground text-">
           {formatDistance(form.createdAt, new Date(), { addSuffix: true })}
           {form.published && (
-            <span className="flext items-center gap-2">
+            <span className="flex items-center gap-2">
               <LuView className="text-muted-foreground" />
               <span>{form.visit.toLocaleString()}</span>
               <FaWpforms className="text-muted-foreground" />
