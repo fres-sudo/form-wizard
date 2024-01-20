@@ -10,6 +10,22 @@ Inspired by [this tutorial](https://www.youtube.com/watch?v=QGXUUXy0AMw&t=9748s)
 
 The app is built with React, TypeScript, TailwindCSS, Prisma, and DnD-Kit. It is fully integrated with all browsers, the server, and an authentication system.
 
+## 🔺Functioning🔺
+
+Dashboard and landing
+![Dashboard](images/Screenshot 2024-01-20 alle 11.52.44.png)
+
+Editor
+![Editor](images/Screenshot 2024-01-20 alle 11.52.23.png)
+
+Editor Preview
+![Editor Preview](images/Screenshot 2024-01-20 alle 11.52.34.png)
+
+Form Daashboard and stats
+![Form Daashboard](images/Screenshot 2024-01-20 alle 11.52.54.png)
+
+
+
 ## 🔺Getting Started🔺
 
 First, run the development server:
