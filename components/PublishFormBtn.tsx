@@ -28,7 +28,7 @@ function PublishFormBtn({ id }: { id: number }) {
         title: "Success",
         description: "Great! Your form has been published correctly.",
       });
-      router.refresh;
+      router.refresh();
     } catch (error) {
       toast({
         title: "Error",

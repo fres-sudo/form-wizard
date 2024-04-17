@@ -61,7 +61,7 @@ async function FormDetailPage({ params }: { params: { id: string } }) {
           helperText="All time form visits"
           value={visit.toLocaleString() || ""}
           loading={false}
-          className="shad-mg shadow-blue-600"
+          className="shad-m"
         />
         <StatsCard
           title="Total submissions"

@@ -227,7 +227,7 @@ function DesignerElementWrapper({ element }: { element: FormElementInstance }) {
                 e.stopPropagation();
                 removeElement(element.id);
               }}>
-              <BiSolidTrash clasName="h-6 w-6" />
+              <BiSolidTrash className="h-6 w-6" />
             </Button>
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 animate-none">

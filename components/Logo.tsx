@@ -5,12 +5,16 @@ import Image from "next/image";
 function Logo() {
   return (
     <div className="flex items-center justify-start h-full">
-      <Image src="/wizard.png" alt="wizard" width={36} height={72} />
       <Link
         href={"/"}
-        className="p-2 font-bold text-3xl bg-gradient-to-r from-indigo-400 to-cyan-400 text-transparent bg-clip-text hover:cursor-pointer">
-        FormWizard
+        className="p-2 font-bold text-3xl text-muted-foreground">
+        Form 
+        <span className=" font-bold text-3xl text-blue-500">
+        Wizard
+        </span>
       </Link>
+      <Image src="/wizard.png" alt="wizard" width={36} height={72} />
+
     </div>
   );
 }

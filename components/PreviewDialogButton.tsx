@@ -27,8 +27,7 @@ function PreviewDialogButton() {
           </p>
         </div>
         <div
-          className="bg-accent flex flex-col flex-grow items-center justify-center p-4 bg-[url(/hexagons.svg)]
-      dark:bg-[url(/hexagons-dark.svg)]">
+          className="bg-accent flex flex-col flex-grow items-center justify-center p-4 bg-auto">
           <div className="max-w-[620px] flex flex-col flex-grow gap-4 bg-background h-full w-full rounded-2xl p-8 overflow-y-auto">
             {elements.map((element) => {
               const FormComponent = FormElements[element.type].formComponent;
