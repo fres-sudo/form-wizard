@@ -13,16 +13,16 @@ The app is built with React, TypeScript, TailwindCSS, Prisma, and DnD-Kit. It is
 ## 🔺Functioning🔺
 
 Dashboard and landing
-![Dashboard](images/Screenshot 2024-01-20 alle 11.52.44.png)
+![Dashboard](images/dashboard.png)
 
 Editor
-![Editor](images/Screenshot 2024-01-20 alle 11.52.23.png)
+![Editor](images/editor.png)
 
 Editor Preview
-![Editor Preview](images/Screenshot 2024-01-20 alle 11.52.34.png)
+![Editor Preview](images/editor-preview.png)
 
 Form Daashboard and stats
-![Form Daashboard](images/Screenshot 2024-01-20 alle 11.52.54.png)
+![Form Daashboard](images/form-dashboard.png)
 
 
 
