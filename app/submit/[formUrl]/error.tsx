@@ -18,6 +18,6 @@ function ErrorPage({ error }: { error: Error }) {
       </Button>
     </div>
   );
-}
+} 
 
 export default ErrorPage;

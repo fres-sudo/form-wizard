@@ -32,7 +32,7 @@ function PublishFormBtn({ id }: { id: number }) {
     } catch (error) {
       toast({
         title: "Error",
-        description:
+        description: 
           "An error occurred while publishing the form, please try it again.",
       });
     }

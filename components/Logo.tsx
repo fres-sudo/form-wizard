@@ -10,10 +10,10 @@ function Logo() {
         className="p-2 font-bold text-3xl text-muted-foreground">
         Form 
         <span className=" font-bold text-3xl text-blue-500">
-        Wizard
+        Wizard 🧙🏻
         </span>
       </Link>
-      <Image src="/wizard.png" alt="wizard" width={36} height={72} />
+    
 
     </div>
   );

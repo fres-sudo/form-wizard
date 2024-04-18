@@ -33,7 +33,10 @@ import { formSchema } from "@/schemas/form";
 import { CreateForm } from "@/actions/form";
 import { useRouter } from "next/navigation";
 
-function CreateFormBtn() {
+function CreateFormBtn({
+  children
+} : { children : React.ReactNode;
+}) {
   const router = useRouter();
 
   const form = useForm<formSchemaType>({
@@ -47,7 +50,7 @@ function CreateFormBtn() {
         title: "Success",
         description: "From created successfully",
       });
-      router.push(`/builder/${formId}`);
+      router.push(`/dashboard/builder/${formId}`);
     } catch (error) {
       toast({
         title: "Error",
@@ -60,16 +63,7 @@ function CreateFormBtn() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant={"outline"}
-          className="group border border-primary/20 h-[190px] 
-        items-center justify-center flex flex-col hover:border-primary 
-        hover:cursor-pointer border-dashed gap-4 ">
-          <BsFileEarmarkPlus className="h-8 w-8 text-muted-foreground group-hover:text-primary" />
-          <p className="font-bold text-xl text-mudet-foregrounf group-hover:text-primary">
-            Create new forms
-          </p>
-        </Button>
+        {children}
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

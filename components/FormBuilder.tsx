@@ -64,7 +64,7 @@ function FormBuilder({ form }: { form: Form }) {
   const sharedUrl = `${window.location.origin}/submit/${form.sharedUrl}`;
 
   // to show something different when the form is published
-  if (form.published) {
+  if (form.published) { 
     return (
       <>
         <Confetti
@@ -103,7 +103,7 @@ function FormBuilder({ form }: { form: Form }) {
                 </Link>
               </Button>
               <Button variant={"link"} asChild>
-                <Link className="gap-2" href={`/forms/${form.id}`}>
+                <Link className="gap-2" href={`/dashboard/forms/${form.id}`}>
                   Form details
                   <BsArrowRight />
                 </Link>
