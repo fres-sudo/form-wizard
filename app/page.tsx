@@ -241,7 +241,7 @@ function LandPage() {
 							duration: 0.5,
 							ease: [0.4, 0.0, 0.2, 1],
 						}}
-						className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug items-start text-start mx-auto ">
+						className="px-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug items-start text-start mx-auto ">
 						Form handling like magic, <br />
 						<Highlight className="text-black dark:text-white">
 							as if under a mystical spell 🧙🏻
@@ -257,7 +257,7 @@ function LandPage() {
 						<Link href={`/dashboard`}>Start Creating</Link>
 					</Button>
 				</div>
-				<div className="mt-4 sm:mt-10 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+				<div className="mt-4 sm:mt-10 rounded-md antialiased items-center justify-center relative overflow-hidden">
 					<InfiniteMovingCards
 						items={testimonials}
 						direction="right"
