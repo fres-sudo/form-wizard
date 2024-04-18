@@ -225,7 +225,7 @@ function LandPage() {
 	];
 
 	return (
-		<div className="flex flex-col xl:flex-row  items-start pl-2 sm:pl-12 bg-dot-thick-neutral-100 dark:bg-dot-thick-neutral-800">
+		<div className="flex flex-col 2xl:flex-row h-screen items-center pl-2 sm:pl-12 bg-dot-thick-neutral-100 dark:bg-dot-thick-neutral-800">
 			<div className="flex flex-col items-start mt-24">
 				<HeroHighlight>
 					<motion.h1
@@ -241,7 +241,7 @@ function LandPage() {
 							duration: 0.5,
 							ease: [0.4, 0.0, 0.2, 1],
 						}}
-						className="text-2xl px-4 md:text-3xl lg:text-4xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug items-start text-start mx-auto ">
+						className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug items-start text-start mx-auto ">
 						Form handling like magic, <br />
 						<Highlight className="text-black dark:text-white">
 							as if under a mystical spell 🧙🏻
