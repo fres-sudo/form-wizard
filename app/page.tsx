@@ -241,7 +241,7 @@ function LandPage() {
 							duration: 0.5,
 							ease: [0.4, 0.0, 0.2, 1],
 						}}
-						className="px-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug items-start text-start mx-auto ">
+						className="px-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug items-start text-start mx-auto ">
 						Form handling like magic, <br />
 						<Highlight className="text-black dark:text-white">
 							as if under a mystical spell 🧙🏻
@@ -251,6 +251,10 @@ function LandPage() {
 						<span className="text-blue-500">Wizard</span>
 					</motion.h1>
 				</HeroHighlight>
+				<p className="pl-4 pt-4 leading-relaxed lg:leading-snug text-muted-foreground w-[18rem] sm:w-[30rem] lg:w-[40rem] text-xs sm:text-lg lg:text-xl font-sans">
+					Interactively create customizable font, save and share them to your
+					friend. Collect them response and enjoiy all the metric.
+				</p>
 				<div className="flex items-end mt-4 sm:mt-10 pl-4 gap-4">
 					<OpenLink />
 					<Button asChild>
